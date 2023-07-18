@@ -14,7 +14,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Shop all",
-            "button_link_1": "shopify://collections/all",
+            "button_link_1": "shopify:\/\/collections\/all",
             "button_style_secondary_1": true,
             "button_label_2": "",
             "button_link_2": "",
@@ -22,7 +22,10 @@
           }
         }
       },
-      "block_order": ["heading", "button"],
+      "block_order": [
+        "heading",
+        "button"
+      ],
       "settings": {
         "image_overlay_opacity": 40,
         "image_height": "large",
@@ -39,10 +42,21 @@
     "full_image": {
       "type": "full-image",
       "settings": {
+        "image": "shopify:\/\/shop_images\/model-with-leather-jacket-over-shoulders.jpg",
+        "image_link": "shopify:\/\/pages\/contact",
+        "image_2": "shopify:\/\/shop_images\/sliced-pumpkin-pie.jpg",
+        "image_link_2": "shopify:\/\/pages\/contact",
+        "image_overlay_opacity": 0,
         "image_height": "custom",
         "custom_image_height": 800,
-        "image_link": "shopify://pages/contact",
-        "image_behavior": "none"
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
       }
     },
     "featured_collection": {
@@ -74,5 +88,9 @@
       }
     }
   },
-  "order": ["image_banner", "full_image", "featured_collection"]
+  "order": [
+    "image_banner",
+    "full_image",
+    "featured_collection"
+  ]
 }
