@@ -15,6 +15,42 @@
         "stack_images_on_mobile": true
       }
     },
+    "overlay_category": {
+      "type": "multicolumn",
+      "settings": {
+        "column_alignment": "center",
+        "image_ratio": "portrait",
+        "button_label": "",
+        "is_overlay": true
+      },
+      "blocks": {
+        "column-1": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/model-with-leather-jacket-over-shoulders.jpg",
+            "title": "Column Title",
+            "text": ""
+          }
+        },
+        "column-2": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/model-with-leather-jacket-over-shoulders.jpg",
+            "title": "Column Title",
+            "text": ""
+          }
+        },
+        "column-3": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/model-with-leather-jacket-over-shoulders.jpg",
+            "title": "Column Title",
+            "text": ""
+          }
+        }
+      },
+      "block_order": ["column-1", "column-2", "column-3"]
+    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
@@ -44,5 +80,5 @@
       }
     }
   },
-  "order": ["full_image", "featured_collection"]
+  "order": ["full_image", "overlay_category", "featured_collection"]
 }

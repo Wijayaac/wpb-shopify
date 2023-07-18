@@ -75,7 +75,7 @@
               style="--animation-order: {{ forloop.index }};"
             {% endif %}
           >
-            <div class="multicolumn-card content-container">
+            <div class="multicolumn-card content-container {% if section.settings.is_overlay %}multicolumn-card--overlay {{ section.settings.image_ratio }}{% endif %}">
               {%- if block.settings.image != blank -%}
                 {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
                   {% assign spaced_image = true %}
@@ -267,6 +267,12 @@
       ],
       "default": "adapt",
       "label": "t:sections.multicolumn.settings.image_ratio.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "is_overlay",
+      "label": "Overlay Style Column",
+      "default": false
     },
     {
       "type": "range",
