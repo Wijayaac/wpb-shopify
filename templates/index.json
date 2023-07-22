@@ -29,6 +29,7 @@
           "settings": {
             "image": "shopify://shop_images/model-with-leather-jacket-over-shoulders.jpg",
             "title": "Column Title",
+            "link": "shopify://pages/contact",
             "text": ""
           }
         },
@@ -37,6 +38,7 @@
           "settings": {
             "image": "shopify://shop_images/model-with-leather-jacket-over-shoulders.jpg",
             "title": "Column Title",
+            "link": "shopify://pages/contact",
             "text": ""
           }
         },
@@ -45,6 +47,7 @@
           "settings": {
             "image": "shopify://shop_images/model-with-leather-jacket-over-shoulders.jpg",
             "title": "Column Title",
+            "link": "shopify://pages/contact",
             "text": ""
           }
         }

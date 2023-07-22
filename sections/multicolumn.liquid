@@ -126,7 +126,7 @@
                 {%- if block.settings.text != blank -%}
                   <div class="rte">{{ block.settings.text }}</div>
                 {%- endif -%}
-                {%- if block.settings.link_label != blank -%}
+                {%- if block.settings.link_label != blank and section.settings.is_overlay != true -%}
                   <a
                     class="link animate-arrow"
                     {% if block.settings.link == blank %}
@@ -136,10 +136,22 @@
                     {% endif %}
                   >
                     {{- block.settings.link_label | escape -}}
-                    <span class="icon-wrap">&nbsp;{% render 'icon-arrow' %}</span></a
-                  >
+                    <span class="icon-wrap">&nbsp;{% render 'icon-arrow' %}</span>
+                  </a>
                 {%- endif -%}
               </div>
+              {%- if block.settings.link != blank and section.settings.is_overlay == true -%}
+                <a
+                  class="link--overlay"
+                  {% if block.settings.link == blank %}
+                    role="link" aria-disabled="true"
+                  {% else %}
+                    href="{{ block.settings.link }}"
+                  {% endif %}
+                >
+                  <span class="icon-wrap">&nbsp;{% render 'icon-arrow' %}</span>
+                </a>
+              {%- endif -%}
             </div>
           </li>
         {%- endfor -%}
