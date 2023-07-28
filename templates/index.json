@@ -3,56 +3,73 @@
     "full_image": {
       "type": "full-image",
       "settings": {
-        "image": "shopify://shop_images/model-with-leather-jacket-over-shoulders.jpg",
-        "image_link": "shopify://pages/contact",
-        "image_2": "shopify://shop_images/sliced-pumpkin-pie.jpg",
-        "image_link_2": "shopify://pages/contact",
+        "image": "shopify:\/\/shop_images\/model-with-leather-jacket-over-shoulders.jpg",
+        "image_link": "shopify:\/\/pages\/contact",
+        "image_2": "shopify:\/\/shop_images\/sliced-pumpkin-pie.jpg",
+        "image_link_2": "shopify:\/\/pages\/contact",
         "image_overlay_opacity": 0,
         "image_height": "custom",
         "custom_image_height": 800,
-        "color_scheme": "",
         "image_behavior": "none",
         "stack_images_on_mobile": true
       }
     },
     "overlay_category": {
       "type": "multicolumn",
-      "settings": {
-        "column_alignment": "center",
-        "image_ratio": "portrait",
-        "button_label": "",
-        "is_overlay": true
-      },
       "blocks": {
         "column-1": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/model-with-leather-jacket-over-shoulders.jpg",
+            "image": "shopify:\/\/shop_images\/model-with-leather-jacket-over-shoulders.jpg",
             "title": "Column Title",
-            "link": "shopify://pages/contact",
-            "text": ""
+            "text": "",
+            "link_label": "",
+            "link": "shopify:\/\/pages\/contact"
           }
         },
         "column-2": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/model-with-leather-jacket-over-shoulders.jpg",
+            "image": "shopify:\/\/shop_images\/model-with-leather-jacket-over-shoulders.jpg",
             "title": "Column Title",
-            "link": "shopify://pages/contact",
-            "text": ""
+            "text": "",
+            "link_label": "",
+            "link": "shopify:\/\/pages\/contact"
           }
         },
         "column-3": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/model-with-leather-jacket-over-shoulders.jpg",
+            "image": "shopify:\/\/shop_images\/model-with-leather-jacket-over-shoulders.jpg",
             "title": "Column Title",
-            "link": "shopify://pages/contact",
-            "text": ""
+            "text": "",
+            "link_label": "",
+            "link": "shopify:\/\/pages\/contact"
           }
         }
       },
-      "block_order": ["column-1", "column-2", "column-3"]
+      "block_order": [
+        "column-1",
+        "column-2",
+        "column-3"
+      ],
+      "settings": {
+        "title": "Multicolumn",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "portrait",
+        "is_overlay": true,
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     },
     "featured_collection": {
       "type": "featured-collection",
@@ -68,7 +85,7 @@
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "solid",
-        "enable_desktop_slider": false,
+        "enable_desktop_slider": true,
         "color_scheme": "background-1",
         "image_ratio": "adapt",
         "image_shape": "default",
@@ -83,5 +100,9 @@
       }
     }
   },
-  "order": ["full_image", "overlay_category", "featured_collection"]
+  "order": [
+    "full_image",
+    "overlay_category",
+    "featured_collection"
+  ]
 }
