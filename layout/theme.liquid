@@ -255,6 +255,11 @@
       >
     {%- endif -%}
 
+    {% if request.page_type == 'product' %}
+      {{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
+      <script src="{{ 'swiper-bundle.min.js' | asset_url }}" defer="defer"></script>
+    {% endif %}  
+
     <script>
       document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
       if (Shopify.designMode) {
@@ -317,6 +322,6 @@
 
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
-    {%- endif -%}
+    {%- endif -%}  
   </body>
 </html>
