@@ -70,10 +70,23 @@
         "padding_bottom": 36
       }
     },
+    "a4e8c0be-9306-46bb-891b-0188cc0fec85": {
+      "type": "full-image",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/joeyy-lee-d4HJp6rtyu4-unsplash_1.jpg",
+        "image_link": "",
+        "image_link_2": "",
+        "image_overlay_opacity": 0,
+        "image_height": "custom",
+        "custom_image_height": 1440,
+        "image_behavior": "none",
+        "stack_images_on_mobile": false
+      }
+    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured products",
+        "title": "",
         "heading_size": "h2",
         "description": "",
         "show_description": false,
@@ -86,7 +99,7 @@
         "view_all_style": "solid",
         "enable_desktop_slider": true,
         "color_scheme": "background-1",
-        "image_ratio": "square",
+        "image_ratio": "portrait",
         "image_shape": "default",
         "show_secondary_image": true,
         "show_vendor": false,
@@ -102,6 +115,7 @@
   "order": [
     "full_image",
     "overlay_category",
+    "a4e8c0be-9306-46bb-891b-0188cc0fec85",
     "featured_collection"
   ]
 }
