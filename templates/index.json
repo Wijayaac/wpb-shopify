@@ -166,7 +166,7 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/category-image-1.jpg",
-            "title": "",
+            "title": "SHOP  OUR DRESS",
             "text": "",
             "link_label": "",
             "link": "shopify:\/\/pages\/contact"
@@ -176,7 +176,7 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/category-image-2.jpg",
-            "title": "",
+            "title": "SHOP ACCECORIES",
             "text": "",
             "link_label": "",
             "link": "shopify:\/\/pages\/contact"
@@ -186,7 +186,7 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/category-image-3.jpg",
-            "title": "",
+            "title": "SHOP BOTTOMS",
             "text": "",
             "link_label": "",
             "link": ""
@@ -196,7 +196,7 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/category-image-4.jpg",
-            "title": "",
+            "title": "DISCOVER OUR UNIVERSE",
             "text": "",
             "link_label": "",
             "link": ""
