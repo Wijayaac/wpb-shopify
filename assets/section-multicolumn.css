@@ -89,7 +89,7 @@
 
 .multicolumn-list__item.center .media--adapt,
 .multicolumn-list__item .media--adapt .multicolumn-card__image {
-  width: auto;
+  width: 100%;
 }
 
 .multicolumn-list__item.center .media--adapt img {
@@ -252,10 +252,16 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 100%;
 }
 
 .multicolumn-card--overlay .multicolumn-card__info>* {
   color: #FFF;
+}
+
+.multicolumn-card--overlay .multicolumn-card__info>h3 {
+  letter-spacing: 0.1em;
+  font-size: 16px;
 }
 
 /* Link */
