@@ -49,7 +49,7 @@
         {%- endif -%}
       </div>
     </div>
-    <div class="image-with-text__text-item grid__item">
+    <div class="image-with-text__text-item grid__item {% if section.settings.border_style %}image-with-text__text-item--border{% endif %}">
       <div
         id="ImageWithText--{{ section.id }}"
         class="image-with-text__content image-with-text__content--{{ section.settings.desktop_content_position }} image-with-text__content--desktop-{{ section.settings.desktop_content_alignment }} image-with-text__content--mobile-{{ section.settings.mobile_content_alignment }} image-with-text__content--{{ section.settings.height }} gradient color-{{ section.settings.color_scheme }} content-container"
@@ -82,7 +82,7 @@
                   {% else %}
                     href="{{ block.settings.button_link }}"
                   {% endif %}
-                  class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"
+                  class="button button--{{ block.settings.button_style }}"
                   {{ block.shopify_attributes }}
                 >
                   {{ block.settings.button_label | escape }}
@@ -209,6 +209,12 @@
       ],
       "default": "left",
       "label": "t:sections.image-with-text.settings.desktop_content_alignment.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "border_style",
+      "default": true,
+      "label": "Border content style"
     },
     {
       "type": "select",
@@ -429,6 +435,26 @@
           "type": "url",
           "id": "button_link",
           "label": "t:sections.image-with-text.blocks.button.settings.button_link.label"
+        },
+        {
+          "type": "select",
+          "id": "button_style",
+          "options": [
+            {
+              "value": "primary",
+              "label": "t:sections.multirow.settings.button_style.options__1.label"
+            },
+            {
+              "value": "secondary",
+              "label": "t:sections.multirow.settings.button_style.options__2.label"
+            },
+            {
+              "value": "tertiary",
+              "label": "Underline Style"
+            }
+          ],
+          "default": "secondary",
+          "label": "t:sections.multirow.settings.button_style.label"
         }
       ]
     }

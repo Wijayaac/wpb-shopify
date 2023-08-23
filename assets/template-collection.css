@@ -93,7 +93,7 @@
   --font-heading-scale: .7;
   max-width: max-content;
   margin: 0 auto;
-  background: white;
+  background: #fff;
   padding: 0 20px;
   letter-spacing: 0.1em;
   font-family: var(--font-heading-family);
@@ -110,7 +110,7 @@
   position: absolute;
   content: "";
   width: 100%;
-  background: black;
+  background: #000;
   height: 1px;
   left: 0;
   top: 50%;

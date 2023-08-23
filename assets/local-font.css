@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('body.woff2') format('woff2'),
+        url('body.woff') format('woff');
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bernhard Modern';
+    src: url('heading.woff2') format('woff2'),
+        url('heading.woff') format('woff');
+    font-style: normal;
+    font-display: swap;
+}
