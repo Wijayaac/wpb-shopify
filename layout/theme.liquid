@@ -246,6 +246,23 @@
       <link rel="preload" as="font" href="{{ settings.type_header_font | font_url }}" type="font/woff2" crossorigin>
     {%- endunless -%}
 
+    {% comment %} Local Font Fallback {% endcomment %}
+    {% comment %}
+      <link rel="preload" as="font" href="{{ "heading.woff2" | asset_url }}" type="font/woff2" crossorigin>
+      <link rel="preload" as="font" href="{{ "body.woff2" | asset_url }}" type="font/woff2" crossorigin>
+    {% endcomment %}
+
+    {% style %}
+      @font-face {
+        font-family: 'Josefin Sans', sans-serif;
+        src: url("{{ 'body.woff2' | asset_url }}") format('woff2');
+      }
+      @font-face {
+        font-family: 'Bernhard Modern', serif;
+        src: url("{{ 'heading.woff2' | asset_url }}") format('woff2');
+      }
+    {% endstyle %}
+
     {%- if settings.predictive_search_enabled -%}
       <link
         rel="stylesheet"
