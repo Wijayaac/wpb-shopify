@@ -4,6 +4,43 @@
   "sections": {
     "footer": {
       "type": "footer",
+      "blocks": {
+        "02454017-94fe-4de6-b2b8-062baa44e8c5": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/20230822_181534.svg",
+            "image_width": 130,
+            "alignment": "center"
+          }
+        },
+        "837f0543-d203-44d5-bd47-085c875dcca7": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Quick links",
+            "menu": "footer"
+          }
+        },
+        "ac548e19-bbed-4903-94a0-dd9e726655af": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Quick links",
+            "menu": "footer"
+          }
+        },
+        "f955271d-6fde-4e9c-81c8-ade2f59183ae": {
+          "type": "text",
+          "settings": {
+            "heading": "CUSTOMER CARE",
+            "subtext": "<p>(0361) 733238<br\/>Monday - Saturday | 8am - 5pm WITA<br\/><br\/>Jl. Kayu Jati No.1, Kerobokan Kelod, Kec. Kuta Utara, Kabupaten Badung, Bali 80361<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "02454017-94fe-4de6-b2b8-062baa44e8c5",
+        "837f0543-d203-44d5-bd47-085c875dcca7",
+        "ac548e19-bbed-4903-94a0-dd9e726655af",
+        "f955271d-6fde-4e9c-81c8-ade2f59183ae"
+      ],
       "settings": {
         "color_scheme": "background-1",
         "newsletter_enable": false,
