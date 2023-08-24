@@ -52,7 +52,7 @@
         "media_size": "large",
         "constrain_to_viewport": true,
         "media_fit": "cover",
-        "gallery_layout": "thumbnail",
+        "gallery_layout": "two_column_slider",
         "media_position": "left",
         "image_zoom": "lightbox",
         "mobile_thumbnails": "hide",
@@ -65,7 +65,7 @@
     "related-products": {
       "type": "related-products",
       "settings": {
-        "heading": "You may also like",
+        "heading": "Often Viewed Together",
         "heading_size": "h2",
         "products_to_show": 4,
         "columns_desktop": 4,
@@ -83,7 +83,7 @@
     "a0b8e656-ae18-4794-8fa5-623b3c26440d": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured collection",
+        "title": "Frequently Bought with",
         "heading_size": "h1",
         "description": "",
         "show_description": false,
@@ -92,7 +92,7 @@
         "products_to_show": 4,
         "columns_desktop": 4,
         "full_width": false,
-        "show_view_all": true,
+        "show_view_all": false,
         "view_all_style": "solid",
         "enable_desktop_slider": false,
         "color_scheme": "",
