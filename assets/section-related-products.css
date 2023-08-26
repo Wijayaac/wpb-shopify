@@ -5,3 +5,11 @@
 .related-products__heading {
   margin: 0 0 3rem;
 }
+
+.collection--full-width .related-products {
+  padding: 0;
+}
+
+.collection--full-width .related-products .product-grid {
+  padding: 0 15px;
+}

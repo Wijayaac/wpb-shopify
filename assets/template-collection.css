@@ -97,6 +97,7 @@
   padding: 0 20px;
   letter-spacing: 0.1em;
   font-family: var(--font-heading-family);
+  position: relative;
 }
 
 .collection__title {
