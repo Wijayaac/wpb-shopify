@@ -15,11 +15,7 @@
 
 <div class="color-{{ section.settings.color_scheme }} gradient isolate">
   <div class="product-tab page-width section-{{ section.id }}-padding">
-    {% assign metaobjects = shop.metaobjects.measurements.values %}
-    {% for item in metaobjects %}
-      {{ item.field }}
-      {{ item.field.value }}
-    {% endfor %}
+    {% comment %} # TODO: Research on how to use metafields of metaobjects.  {% endcomment %}
     <div class="product-tab__wrapper">
       <nav class="product-tab__links d-flex list-unstyled">
         <li
@@ -36,47 +32,96 @@
           </a>
         </li>
         <li
-          class="                product-tab__navigation product-tab__navigation--description active"
-          id="description"
+          class="product-tab__navigation product-tab__navigation--care active"
+          id="care"
         >
-          {%- if product.metafields.custom.ingredients != blank -%}
-            <a
-              href="#/description"
-              data-target="description"
-              class="product-tab__link d-flex align-items-center"
-            >
-              Garment Care
-            </a>
-          {% endif %}
+          <a
+            href="#/care"
+            data-target="care"
+            class="product-tab__link d-flex align-items-center"
+          >
+            Garment Care
+          </a>
+        </li>
+        <li
+          class="product-tab__navigation product-tab__navigation--care active"
+          id="care"
+        >
+          <a
+            href="#/size"
+            data-target="size"
+            class="product-tab__link d-flex align-items-center"
+          >
+            Size & Fit
+          </a>
         </li>
       </nav>
+      {% comment %} Description {% endcomment %}
       <div
         class="product-tab__item product-tab__item--description active"
         id="description"
       >
         {{ product.description }}
-        {% comment %}
-          {%- case block.type -%}
-            {%- when 'description' -%}
-              {%- if product.metafields.custom.long_description != blank -%}
-                {{ product.metafields.custom.long_description | metafield_tag }}
-              {%- endif -%}
-            {%- when '@app' -%}
-              {% render block %}
-            {%- when 'ingredients' -%}
-              {%- if product.metafields.custom.ingredients != blank -%}
-                {{ product.metafields.custom.ingredients | metafield_tag }}
-              {%- endif -%}
-          {%- endcase -%}
-        {% endcomment %}
       </div>
+      {% comment %} Care {% endcomment %}
       <div
-        class="product-tab__item product-tab__item--garment"
-        id="garment"
+        class="product-tab__item product-tab__item--care"
+        id="care"
       >
-        {%- if product.metafields.custom.ingredients != blank -%}
-          {{ product.metafields.custom.ingredients | metafield_tag }}
-        {%- endif -%}
+        <ul>
+          <li>Gentle Cold Hand Wash Separately With Mild Detergent</li>
+          <li>Do Not Bleach</li>
+          <li>Hang Dry In Shade</li>
+          <li>Reshape And Cool Iron Whilst Damp</li>
+          <li>Dry Cleanable</li>
+          <li>Do Not Soak</li>
+          <li>Do Not Wring Or Twist</li>
+        </ul>
+      </div>
+      {% comment %} Size Fit {% endcomment %}
+      <div
+        class="product-tab__item product-tab__item--size"
+        id="size"
+      >
+        {%- liquid
+          assign measurements = 'Front Length From Shoulder,Back Length From Middle under the Neck,Bust Around,Sleeve Opening Around,Sleeve Length,' | split: ','
+          assign sizes_s = '75,87,168,36,69' | split: ','
+          assign sizes_m = '75,87,184,38,69' | split: ','
+          assign sizes_l = '1,2,3,4,5' | split: ','
+          assign sizes_one = '1,2,3,4,5' | split: ','
+        -%}
+
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>S - M</th>
+              <th>M - L</th>
+              <th>L - XL</th>
+              <th>One Size</th>
+            </tr>
+          </thead>
+          <tbody>
+            {%- assign measurementsSize = measurements.size | minus: 1 -%}
+            {% for i in (0..measurementsSize) %}
+              <tr>
+                <td>{{ measurements[i] }}</td>
+                {%- if sizes_s[i] != blank -%}
+                  <td>{{ sizes_s[i] }}</td>
+                {%- endif -%}
+                {% if sizes_m[i] != blank %}
+                  <td>{{ sizes_m[i] }}</td>
+                {% endif %}
+                {% if sizes_l[i] != blank %}
+                  <td>{{ sizes_l[i] }}</td>
+                {% endif %}
+                {% if sizes_one[i] != blank %}
+                  <td>{{ sizes_one[i] }}</td>
+                {% endif %}
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
