@@ -15,11 +15,10 @@
 
 <div class="color-{{ section.settings.color_scheme }} gradient isolate">
   <div class="product-tab page-width section-{{ section.id }}-padding">
-    {% comment %} # TODO: Research on how to use metafields of metaobjects.  {% endcomment %}
     <div class="product-tab__wrapper">
       <nav class="product-tab__links d-flex list-unstyled">
         <li
-          class="                product-tab__navigation product-tab__navigation--description active"
+          class="product-tab__navigation product-tab__navigation--description active"
           id="description"
         >
           <a
@@ -68,41 +67,68 @@
         class="product-tab__item product-tab__item--care"
         id="care"
       >
-        <ul>
-          <li>Gentle Cold Hand Wash Separately With Mild Detergent</li>
-          <li>Do Not Bleach</li>
-          <li>Hang Dry In Shade</li>
-          <li>Reshape And Cool Iron Whilst Damp</li>
-          <li>Dry Cleanable</li>
-          <li>Do Not Soak</li>
-          <li>Do Not Wring Or Twist</li>
-        </ul>
+        {%- if product.metafields.custom.garment_care.value != blank -%}
+          <ul>
+            {% for block in product.metafields.custom.garment_care.value %}
+              <li>{{ block.instruction.value }}</li>
+            {% endfor %}
+          </ul>
+        {%- endif -%}
       </div>
       {% comment %} Size Fit {% endcomment %}
       <div
         class="product-tab__item product-tab__item--size"
         id="size"
       >
+        {%- if product.metafields.custom.measurements.value != blank -%}
+          {% for block in product.metafields.custom.measurements.value %}
+            {%- capture measurement_name -%}{{measurement_name }}, {{block.name.value}}{%- endcapture -%}
+          {% endfor %}
+        {%- endif -%}
         {%- liquid
-          assign measurements = 'Front Length From Shoulder,Back Length From Middle under the Neck,Bust Around,Sleeve Opening Around,Sleeve Length,' | split: ','
-          assign sizes_s = '75,87,168,36,69' | split: ','
-          assign sizes_m = '75,87,184,38,69' | split: ','
-          assign sizes_l = '1,2,3,4,5' | split: ','
-          assign sizes_one = '1,2,3,4,5' | split: ','
+          assign measurements = measurement_name | replace_first: ',', '' | split: ','
+          assign measurementsSize = measurements.size | minus: 1
+        -%}
+        {% for idx in (0..measurementsSize) %}
+          {%- if product.metafields.custom.sm_size.value != blank -%}
+            {%- capture s -%}{{ s }}, {{ product.metafields.custom.sm_size.value[idx] }}{%- endcapture -%}
+          {%- endif -%}
+          {%- if product.metafields.custom.ml_size.value != blank -%}
+            {%- capture m -%}{{ m }}, {{ product.metafields.custom.ml_size.value[idx] }}{%- endcapture -%}
+          {%- endif -%}
+          {%- if product.metafields.custom.xl_size.value != blank -%}
+            {%- capture l -%}{{ l }}, {{ product.metafields.custom.xl_size.value[idx] }}{%- endcapture -%}
+          {%- endif -%}
+          {%- if product.metafields.custom.one_size.value != blank -%}
+            {%- capture one -%}{{ one }}, {{ product.metafields.custom.one_size.value[idx] }}{%- endcapture -%}
+          {%- endif -%}
+        {% endfor %}
+        {%- liquid
+          assign sizes_s = s | replace_first: ',', '' | split: ','
+          assign sizes_m = m | replace_first: ',', '' | split: ','
+          assign sizes_l = l | replace_first: ',', '' | split: ','
+          assign sizes_one = one | replace_first: ',', '' | split: ','
         -%}
 
         <table class="table">
           <thead>
             <tr>
               <th></th>
-              <th>S - M</th>
-              <th>M - L</th>
-              <th>L - XL</th>
-              <th>One Size</th>
+              {%- if sizes_s != blank -%}
+                <th>S - M</th>
+              {%- endif -%}
+              {% if sizes_m != blank %}
+                <th>M - L</th>
+              {% endif %}
+              {% if sizes_l != blank %}
+                <th>L - XL</th>
+              {% endif %}
+              {% if sizes_one != blank %}
+                <th>One Size</th>
+              {% endif %}
             </tr>
           </thead>
           <tbody>
-            {%- assign measurementsSize = measurements.size | minus: 1 -%}
             {% for i in (0..measurementsSize) %}
               <tr>
                 <td>{{ measurements[i] }}</td>
