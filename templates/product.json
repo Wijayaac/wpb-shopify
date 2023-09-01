@@ -90,7 +90,9 @@
       }
     },
     "product-gallery": {
-      "type": "product-gallery"
+      "type": "product-gallery",
+      "settings": {
+      }
     },
     "a0b8e656-ae18-4794-8fa5-623b3c26440d": {
       "type": "featured-collection",
