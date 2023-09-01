@@ -89,6 +89,9 @@
         "padding_bottom": 28
       }
     },
+    "product-gallery": {
+      "type": "product-gallery"
+    },
     "a0b8e656-ae18-4794-8fa5-623b3c26440d": {
       "type": "featured-collection",
       "settings": {
@@ -122,6 +125,7 @@
     "main",
     "description",
     "related-products",
+    "product-gallery",
     "a0b8e656-ae18-4794-8fa5-623b3c26440d"
   ]
 }

@@ -87,32 +87,3 @@
 .collection--full-width .collection__title {
   padding: 0 10px;
 }
-
-/* Default Style */
-.collection__title .title {
-  --font-heading-scale: .7;
-  max-width: max-content;
-  margin: 0 auto;
-  background: #fff;
-  padding: 0 20px;
-  letter-spacing: 0.1em;
-  font-family: var(--font-heading-family);
-  position: relative;
-}
-
-.collection__title {
-  position: relative;
-  margin: 0 auto;
-  text-align: center;
-  text-transform: capitalize;
-}
-
-.collection__title::before {
-  position: absolute;
-  content: "";
-  width: 100%;
-  background: #000;
-  height: 1px;
-  left: 0;
-  top: 50%;
-}

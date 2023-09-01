@@ -3340,3 +3340,32 @@ details-disclosure>details {
     --sparkle: url('./sparkle.gif');
   }
 }
+
+/* Default Style */
+.theme__title .title {
+  --font-heading-scale: .7;
+  max-width: max-content;
+  margin: 0 auto;
+  background: #fff;
+  padding: 0 20px;
+  letter-spacing: 0.1em;
+  font-family: var(--font-heading-family);
+  position: relative;
+}
+
+.theme__title {
+  position: relative;
+  margin: 20px auto;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.theme__title::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  background: #000;
+  height: 1px;
+  left: 0;
+  top: 50%;
+}

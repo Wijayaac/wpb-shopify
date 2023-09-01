@@ -1,6 +1,5 @@
 class ProductGallery {
   constructor() {
-    console.log("product-page");
     const swiper = new Swiper(".swiper-container", {
       speed: 400,
       spaceBetween: 5,
