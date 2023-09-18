@@ -8,30 +8,30 @@
         "02454017-94fe-4de6-b2b8-062baa44e8c5": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/20230822_181534.svg",
-            "image_width": 130,
+            "image": "shopify:\/\/shop_images\/WHITE_PEACOCK_LOGO.png",
+            "image_width": 185,
             "alignment": "center"
           }
         },
         "837f0543-d203-44d5-bd47-085c875dcca7": {
           "type": "link_list",
           "settings": {
-            "heading": "Our Shop",
+            "heading": "Find more",
             "menu": "footer"
           }
         },
         "ac548e19-bbed-4903-94a0-dd9e726655af": {
           "type": "link_list",
           "settings": {
-            "heading": "Menu Legal",
+            "heading": "Supports",
             "menu": "footer"
           }
         },
         "f955271d-6fde-4e9c-81c8-ade2f59183ae": {
           "type": "text",
           "settings": {
-            "heading": "CUSTOMER CARE",
-            "subtext": "<p>(0361) 733238<br\/>Monday - Saturday | 8am - 5pm WITA<br\/><br\/>Jl. Kayu Jati No.1, Kerobokan Kelod, Kec. Kuta Utara, Kabupaten Badung, Bali 80361<\/p>"
+            "heading": "",
+            "subtext": "<p>Phone : (0361) 733238<br\/>WhatsApp : <a href=\"https:\/\/api.whatsapp.com\/send?phone=6281338743611\" target=\"_blank\" title=\"WhatsApp\">+62 813-3874-3611<\/a><br\/>Monday - Saturday | 8am - 5pm WITA<br\/><br\/>Kayu Jati 1X Seminyak - Oberoi<\/p>"
           }
         }
       },
@@ -42,7 +42,7 @@
         "f955271d-6fde-4e9c-81c8-ade2f59183ae"
       ],
       "settings": {
-        "color_scheme": "background-1",
+        "color_scheme": "inverse",
         "newsletter_enable": false,
         "newsletter_heading": "Subscribe to our emails",
         "enable_follow_on_shop": false,
