@@ -2361,8 +2361,12 @@ product-info .loading-overlay:not(.hidden)~*,
 }
 
 .header__heading-link .h2 {
+  --font-heading-scale: 0.7;
   line-height: 1;
   color: rgba(var(--color-foreground), 0.75);
+  text-transform: uppercase;
+  font-family: var(--font-heading-family);
+  letter-spacing: 0.2em;
 }
 
 .header__heading-logo {
@@ -2391,6 +2395,12 @@ product-info .loading-overlay:not(.hidden)~*,
 
   .header--mobile-left {
     grid-template-columns: auto 2fr 1fr;
+  }
+
+  .header__heading-link .h2 {
+    --font-heading-scale: 0.5;
+    font-weight: 600;
+    text-transform: uppercase;
   }
 }
 
@@ -3343,7 +3353,7 @@ details-disclosure>details {
 
 /* Default Style */
 .theme__title .title {
-  --font-heading-scale: .7;
+  /* --font-heading-scale: .7; */
   max-width: max-content;
   margin: 0 auto;
   background: #fff;

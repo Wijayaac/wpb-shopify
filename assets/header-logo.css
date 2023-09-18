@@ -44,6 +44,10 @@
         max-width: 100%;
     }
 
+    .header-logo-wrapper .title-wrapper {
+        padding: 0;
+    }
+
     .header-logo-wrapper .title {
         --font-heading-scale: 1.5;
         text-align: center;
