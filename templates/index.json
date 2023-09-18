@@ -1,5 +1,13 @@
 {
   "sections": {
+    "logo_header": {
+      "type": "header-logo",
+      "settings": {
+        "title": "White Peacock<br>Bali",
+        "logo": "shopify:\/\/shop_images\/WHITE_PEACOCK_LOGO.png"
+      }
+
+    },
     "full_image": {
       "type": "full-image",
       "settings": {
@@ -278,6 +286,7 @@
     }
   },
   "order": [
+    "logo_header",
     "full_image",
     "c3ce9bee-68b0-423c-9cc6-5452525a474a",
     "f96599f2-4c61-4321-976e-6b3c3c1dcc01",
