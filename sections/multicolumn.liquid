@@ -55,6 +55,9 @@
               assign highest_ratio = block.settings.image.aspect_ratio
             endif
           endfor
+          if section.settings.is_overlay
+            assign highest_ratio = 0.7
+          endif
         -%}
         {%- for block in section.blocks -%}
           {%- assign empty_column = '' -%}

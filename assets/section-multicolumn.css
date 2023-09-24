@@ -249,19 +249,33 @@
 .multicolumn-card--overlay .multicolumn-card__info {
   position: absolute;
   z-index: 3;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  bottom: 0;
+  /* left: 50%; */
+  /* transform: translate(-50%, -50%); */
   width: 100%;
+  padding: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 400ms ease;
 }
 
 .multicolumn-card--overlay .multicolumn-card__info>* {
-  color: #FFF;
+  color: #000;
 }
 
 .multicolumn-card--overlay .multicolumn-card__info>h3 {
   letter-spacing: 0.1em;
   font-size: 16px;
+  padding: 1rem;
+  background-color: #fff;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.multicolumn-card--overlay:hover .multicolumn-card__info {
+  transform: translateY(-50%);
+  opacity: 1;
+  visibility: visible;
 }
 
 /* Link */
