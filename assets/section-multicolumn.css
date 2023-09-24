@@ -272,6 +272,8 @@
   margin: 0 auto;
 }
 
+/* Force showing the overlay label on theme editor */
+#app .multicolumn-card--overlay .multicolumn-card__info,
 .multicolumn-card--overlay:hover .multicolumn-card__info {
   transform: translateY(-50%);
   opacity: 1;
