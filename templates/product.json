@@ -72,6 +72,19 @@
     },
     "product-gallery": {
       "type": "product-gallery",
+      "blocks": {
+        "855a7933-b6c2-4450-bd2e-4166b9448047": {
+          "type": "photo",
+          "repeater": "{{ product.metafields.custom.gallery.value }}",
+          "settings": {
+            "image": "{{ block.repeater.image.value }}",
+            "title": "{{ block.repeater.name.value }}"
+          }
+        }
+      },
+      "block_order": [
+        "855a7933-b6c2-4450-bd2e-4166b9448047"
+      ],
       "settings": {
         "heading": "Gallery",
         "full_width": true,
