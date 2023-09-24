@@ -196,8 +196,8 @@
         "column-1": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/category-image-1.jpg",
-            "title": "SHOP  OUR DRESS",
+            "image": "shopify:\/\/shop_images\/product-with-model-1.webp",
+            "title": "DRESS",
             "text": "",
             "link_label": "",
             "link": "shopify:\/\/pages\/contact"
@@ -206,8 +206,8 @@
         "column-2": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/category-image-2.jpg",
-            "title": "SHOP ACCECORIES",
+            "image": "shopify:\/\/shop_images\/HibiscusLaneCharmNecklace-Ghosted_1000x1000_04fba680-a18b-4ea9-9924-c3e806129631.jpg",
+            "title": "ACCECORIES",
             "text": "",
             "link_label": "",
             "link": "shopify:\/\/pages\/contact"
@@ -216,8 +216,8 @@
         "a55ace6e-3a63-4c28-9248-fe3cdab95673": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/category-image-3.jpg",
-            "title": "SHOP BOTTOMS",
+            "image": "shopify:\/\/shop_images\/Spell-EveDenimSkirt-WashedBlue-01_540x540_8f7fd7f2-9207-45cd-a0ab-ef9ef161d065.jpg",
+            "title": "PANTS",
             "text": "",
             "link_label": "",
             "link": ""
@@ -226,8 +226,8 @@
         "e4cdab71-333c-493c-abeb-89b98c636919": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/category-image-4.jpg",
-            "title": "DISCOVER OUR UNIVERSE",
+            "image": "shopify:\/\/shop_images\/Screenshot_32.jpg",
+            "title": "COLLECTIONS",
             "text": "",
             "link_label": "",
             "link": ""
@@ -245,7 +245,7 @@
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
-        "is_overlay": true,
+        "is_overlay": false,
         "columns_desktop": 4,
         "column_alignment": "center",
         "background_style": "none",
