@@ -38,3 +38,8 @@
     --swiper-theme-color: #000;
     --swiper-navigation-size: 32px;
 }
+
+.galery-item__info h3 {
+    text-align: center;
+    text-transform: lowercase;
+}
