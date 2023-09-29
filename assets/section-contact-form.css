@@ -22,6 +22,12 @@
 
 .contact__button {
   margin-top: 3rem;
+  font-family: var(--font-heading-family);
+}
+
+.contact__button button {
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 @media screen and (min-width: 750px) {

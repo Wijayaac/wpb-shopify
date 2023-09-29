@@ -3392,3 +3392,8 @@ details-disclosure>details {
   object-fit: cover;
   object-position: center;
 }
+
+/* Money Converter cart notification */
+.header .buckscc-cart-banner {
+  grid-column: 2;
+}
