@@ -3,9 +3,10 @@
     "logo_header": {
       "type": "header-logo",
       "settings": {
-        "logo_position": "right",
+        "logo_position": "center",
         "logo": "shopify:\/\/shop_images\/WHITE_PEACOCK_LOGO.png",
-        "title": "White Peacock<br>Bali",
+        "title_before": "White",
+        "title_after": "Peacock",
         "padding_top": 36,
         "padding_bottom": 36
       }

@@ -280,6 +280,14 @@
   visibility: visible;
 }
 
+@media screen and (max-width: 991px) {
+  .multicolumn-card--overlay .multicolumn-card__info {
+    transform: translateY(-50%);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
 /* Link */
 .link--overlay {
   position: absolute;

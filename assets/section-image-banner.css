@@ -250,6 +250,10 @@
   .banner--stacked .banner__media-image-half {
     width: 100%;
   }
+
+  .banner--custom .banner__media {
+    position: relative;
+  }
 }
 
 .banner__content {

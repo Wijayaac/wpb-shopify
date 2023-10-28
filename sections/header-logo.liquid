@@ -21,9 +21,9 @@
   >
     <div class="header-logo-wrapper header-logo-wrapper--{{ section.settings.logo_position }}">
       <div class="title-wrapper title-wrapper--self-padded-mobile title-wrapper--no-top-margin">
-        <h1 class="title inline-richtext {{ section.settings.heading_size }}">
-          {{ section.settings.title }}
-        </h1>
+        <h2 class="title inline-richtext {{ section.settings.heading_size }}">
+          {{ section.settings.title_before }}
+        </h2>
       </div>
       <div class="header-logo-img">
         {% if section.settings.logo %}
@@ -32,6 +32,11 @@
         {%- else -%}
           {{ 'hero-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
         {% endif %}
+      </div>
+      <div class="title-wrapper title-wrapper--self-padded-mobile title-wrapper--no-top-margin">
+        <h2 class="title inline-richtext {{ section.settings.heading_size }}">
+          {{ section.settings.title_after }}
+        </h2>
       </div>
     </div>
   </div>
@@ -54,6 +59,10 @@
           "label": "Left position"
         },
         {
+          "value": "center",
+          "label": "Center position"
+        },
+        {
           "value": "right",
           "label": "Right position"
         }
@@ -68,12 +77,37 @@
     },
     {
       "type": "text",
-      "id": "title",
-      "label": "Title"
+      "id": "title_before",
+      "label": "Title before logo"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "t:sections.all.heading_size.options__1.label"
+        },
+        {
+          "value": "h1",
+          "label": "t:sections.all.heading_size.options__2.label"
+        },
+        {
+          "value": "h0",
+          "label": "t:sections.all.heading_size.options__3.label"
+        }
+      ],
+      "default": "h1",
+      "label": "t:sections.all.heading_size.label"
     },
     {
       "type": "header",
       "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "text",
+      "id": "title_after",
+      "label": "Title after logo"
     },
     {
       "type": "range",
