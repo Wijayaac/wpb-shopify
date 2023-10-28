@@ -6,6 +6,7 @@
         "logo_position": "center",
         "logo": "shopify:\/\/shop_images\/WHITE_PEACOCK_LOGO.png",
         "title_before": "White",
+        "heading_size": "h1",
         "title_after": "Peacock",
         "padding_top": 36,
         "padding_bottom": 36
