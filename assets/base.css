@@ -500,8 +500,9 @@ h6:empty {
   text-underline-offset: 0.3rem;
   color: rgb(var(--color-link));
   background-color: transparent;
-  font-size: 1.4rem;
-  font-family: inherit;
+  font-size: 1.6rem;
+  font-family: var(--font-heading-family);
+  letter-spacing: 0.06rem;
 }
 
 .link--text {
@@ -3353,14 +3354,19 @@ details-disclosure>details {
 
 /* Default Style */
 .theme__title .title {
-  /* --font-heading-scale: .7; */
   max-width: max-content;
   margin: 0 auto;
   background: #fff;
   padding: 0 20px;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.01em;
   font-family: var(--font-heading-family);
   position: relative;
+}
+
+@media screen and (min-width: 992px) {
+  .theme__title .title {
+    letter-spacing: 0.1em;
+  }
 }
 
 .theme__title {

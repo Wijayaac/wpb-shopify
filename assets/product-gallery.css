@@ -9,8 +9,14 @@
 .gallery__container {
     position: relative;
     overflow: hidden;
-    height: 400px;
     width: 100%;
+}
+
+@media screen and (min-width: 992px) {
+    .gallery__container {
+        height: 400px;
+    }
+
 }
 
 .gallery__wrapper {
@@ -37,6 +43,13 @@
 .gallery__navigation-button {
     --swiper-theme-color: #000;
     --swiper-navigation-size: 32px;
+}
+
+@media screen and (max-width: 991px) {
+    .gallery__navigation-button {
+        display: none;
+    }
+
 }
 
 .galery-item__info h3 {

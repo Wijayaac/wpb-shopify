@@ -7,7 +7,14 @@
 }
 
 .collection--full-width .related-products {
-  padding: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@media screen and (min-width: 992px) {
+  .collection--full-width .related-products {
+    padding: 0;
+  }
 }
 
 .collection--full-width .related-products .product-grid {

@@ -1,11 +1,17 @@
 .price {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   letter-spacing: 0.1rem;
   line-height: calc(1 + 0.5 / var(--font-body-scale));
   color: rgb(var(--color-foreground));
 }
 
-.price > * {
+@media screen and (min-width: 992px) {
+  .price {
+    font-size: 1.6rem;
+  }
+}
+
+.price>* {
   display: inline-block;
   vertical-align: top;
 }
