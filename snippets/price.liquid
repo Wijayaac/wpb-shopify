@@ -19,6 +19,8 @@
 
   assign compare_at_price = target.compare_at_price
   assign price = target.price | default: 1999
+  assign aud_price = price | divided_by: 10000
+  assign aud_compare_at_price = compare_at_price | divided_by: 10000
   assign available = target.available | default: false
   assign money_price = price | money
   if settings.currency_code_enabled
@@ -48,10 +50,10 @@
     {%- endcomment -%}
     <div class="price__regular">
       <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>
-      <span class="price-item price-item--regular">
-        {{ money_price }}
-      </span>
+      <div class="price-item price-item--regular price-item--main">A${{ aud_price | money_without_currency }}</div>
+      <span class="price-item price-item--regular price-item--secondary"> ({{ money_price }}) </span>
     </div>
+    {% comment %} // TODO: also apply manual price convert to sale price {% endcomment %}
     <div class="price__sale">
       {%- unless product.price_varies == false and product.compare_at_price_varies %}
         <span class="visually-hidden visually-hidden--inline">{{ 'products.product.price.regular_price' | t }}</span>

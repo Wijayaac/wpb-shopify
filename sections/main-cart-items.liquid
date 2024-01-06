@@ -112,6 +112,9 @@
                       </div>
                     {%- else -%}
                       <div class="product-option">
+                        <div class="price-item price-item--main">
+                          A${{ item.original_price | divided_by: 10000 | money_without_currency }}
+                        </div>
                         {{ item.original_price | money }}
                       </div>
                     {%- endif -%}
@@ -177,6 +180,7 @@
                       </div>
                     </div>
                     <div class="cart-item__price-wrapper">
+                      {% comment %} // TODO: also apply manual price convert to sale price {% endcomment %}
                       {%- if item.original_line_price != item.final_line_price -%}
                         <dl class="cart-item__discounted-prices">
                           <dt class="visually-hidden">
@@ -195,6 +199,9 @@
                           </dd>
                         </dl>
                       {%- else -%}
+                        <div class="price-item price-item--main">
+                          A${{ item.original_price | divided_by: 10000 | money_without_currency }}
+                        </div>
                         <span class="price price--end">
                           {{ item.original_line_price | money }}
                         </span>
@@ -318,6 +325,9 @@
                           </dd>
                         </dl>
                       {%- else -%}
+                        <div class="price-item price-item--main">
+                          A${{ item.original_price | divided_by: 10000 | money_without_currency }}
+                        </div>
                         <span class="price price--end">
                           {{ item.original_line_price | money }}
                         </span>
