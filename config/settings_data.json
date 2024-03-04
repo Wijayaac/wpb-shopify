@@ -135,9 +135,9 @@
 
     ],
     "blocks": {
-      "776302416715791028": {
-        "type": "shopify:\/\/apps\/bucks-currency-converter-pro\/blocks\/app-embed\/4f0a9b06-9da4-4a49-b378-2de9d23a3af3",
-        "disabled": true,
+      "yoast-seo-metatags": {
+        "type": "shopify:\/\/apps\/yoast-seo-seo-for-everyone\/blocks\/metatags\/7c777011-bc88-4743-a24e-64336e1e5b46",
+        "disabled": false,
         "settings": {
         }
       }

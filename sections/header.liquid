@@ -465,6 +465,9 @@
   customElements.define('sticky-header', StickyHeader);
 {% endjavascript %}
 
+{%- comment -%}Yoast SEO schema control block: start.{%- endcomment -%}
+{%- assign yoast_seo_settings = shop.metafields.yoast_seo.settings.value | default: shop.metafields.yoast_seo.settings -%}
+{%- if disabled_by_yoast_seo or yoast_seo_settings.schema.useTheme.schema or yoast_seo_settings.schema.useTheme.organization -%}
 <script type="application/ld+json">
   {
     "@context": "http://schema.org",
@@ -486,11 +489,16 @@
     ],
     "url": {{ request.origin | append: page.url | json }}
   }
+{%- comment -%}Yoast SEO schema control block: end.{%- endcomment -%}
 </script>
+{%- endif -%}
 
 {%- if request.page_type == 'index' -%}
   {% assign potential_action_target = request.origin | append: routes.search_url | append: "?q={search_term_string}" %}
-  <script type="application/ld+json">
+  {%- comment -%}Yoast SEO schema control block: start.{%- endcomment -%}
+{%- assign yoast_seo_settings = shop.metafields.yoast_seo.settings.value | default: shop.metafields.yoast_seo.settings -%}
+{%- if disabled_by_yoast_seo or yoast_seo_settings.schema.useTheme.schema or yoast_seo_settings.schema.useTheme.website -%}
+<script type="application/ld+json">
     {
       "@context": "http://schema.org",
       "@type": "WebSite",
@@ -502,7 +510,9 @@
       },
       "url": {{ request.origin | append: page.url | json }}
     }
-  </script>
+  {%- comment -%}Yoast SEO schema control block: end.{%- endcomment -%}
+</script>
+{%- endif -%}
 {%- endif -%}
 
 {% schema %}
